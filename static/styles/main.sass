@@ -1,0 +1,82 @@
+@import 'normalize'
+
+$bg: #1E1E20
+$primary: #DC3522
+$text: #D9CB9E
+$text-2: #fff
+$text-3: #4C5958
+$text-4: #999
+
+$font: 'Source Sans Pro', sans-serif
+$font-2: 'Pacifico', cursive
+
+body
+    color: $text
+    font-size: 20px
+    font-family:  $font
+    background-color: $bg
+    padding: 3em
+
+h1
+    color: $text-2
+    font-family: $font-2
+    font-size: 3.5em
+    font-weight: 700
+    line-height: 1em
+    margin: 0
+h2
+    color: $text
+    font-weight: 300
+    line-height: 2.5em
+    margin: 0
+    margin-bottom: 2em
+
+h3
+    font-weight: 400
+    font-size: 1.3em
+    margin: 0
+    margin-bottom: 0.769em
+
+.primary
+    color: $primary
+
+.fa-heart
+    animation: heartbeat 1s infinite
+
+section
+    margin-bottom: 2em
+    ul
+        color: $text-4
+        list-style: none
+        padding: 0
+        li
+            margin-bottom: 0.3em
+            &:last-child
+                margin: 0
+            i
+                margin-right: .5em
+            a
+                color: $text-3
+                text-decoration: none
+                span
+                    display: inline-block
+                    transition: 0.25s all
+                    &:first-child
+                        min-width: 5em
+                        color: $text-4
+                        & + span
+                            border-bottom: 3px dotted transparent
+                &:hover
+                    color: $primary
+                    span
+                        &:first-child
+                            color: $text-2
+                            & + span
+                                border-bottom: 3px dotted $primary
+@keyframes heartbeat
+    0%
+        transform: scale( .75 )
+    50%
+        transform: scale( 1 )
+    100%
+        transform: scale( .75 )
