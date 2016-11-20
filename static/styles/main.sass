@@ -49,8 +49,33 @@ section
         color: $text-4
         list-style: none
         padding: 0
-        li
+        & > li
             margin-bottom: 0.3em
+            & > ul
+                padding: 0.3em 1em
+                margin-left: 0.5em
+                font-size: .8em
+                font-weight: 300
+                color: $primary
+                & > li
+                    position: relative
+                    &:before
+                        content: ""
+                        position: absolute
+                        border-left: 2px dotted $text-3
+                        top: 0
+                        bottom: 50%
+                        left: -1em
+                    &:after
+                        content: ""
+                        position: absolute
+                        border-bottom: 2px dotted $text-3
+                        top: 50%
+                        left: -1em
+                        width: 0.5em
+            & > span
+                font-weight: 400
+                border-bottom: 1px dotted $primary
             &:last-child
                 margin: 0
             i
@@ -58,7 +83,7 @@ section
             a
                 color: $text-3
                 text-decoration: none
-                span
+                & > span
                     display: inline-block
                     transition: 0.25s all
                     &:first-child
